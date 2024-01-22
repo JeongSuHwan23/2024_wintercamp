@@ -1,9 +1,9 @@
 class Snake {
-    construtor() {
+    constructor() {
       this.body = [];
       this.body[0] = createVector(0, 0);
-      this.xdir = 1;
-      this.ydir = 1;
+      this.xdir = 0;
+      this.ydir = 0;
     }
     
     update() {
