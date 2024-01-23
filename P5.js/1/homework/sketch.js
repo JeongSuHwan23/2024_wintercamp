@@ -38,11 +38,11 @@ function draw() {
     locateFood();
   }
   
-  // if(snake.endGame()){
-  //   console.log("End Game");
-  //   background(255,0,0);
-  //   noLoop();
-  // }
+  if(snake.endGame()){
+    console.log("End Game");
+    background(255,0,0);
+    noLoop();
+  }
   
   //draw snake
   snake.update();
