@@ -28,21 +28,17 @@ class Snake {
   endGame() {
     let x = this.body[this.body.length - 1].x;
     let y = this.body[this.body.length - 1].y;
-    if (x > width-1 || y > height-1 || x < 0 || y < 0) {
-      // 뱀의 머리가 경계선을 넘어갔을 경우
+    if (x > w-1 || y > h-1 || x < 0 || y < 0) {
       return true;
     }
-    for (let i = 0; i < this.body.length - 2; i++) { // 머리를 제외한 몸통 부분에 대해서만 검사
+    for (let i = 0; i < this.body.length - 2; i++) { 
       let part = this.body[i];
       if (part.x == x && part.y == y) {
-        // 뱀의 머리가 몸통에 닿았을 경우
         return true;
       }
     }
     return false;
   }
-
-
   
   update() {
     let head = this.body[this.body.length - 1].copy()
